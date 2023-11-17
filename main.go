@@ -10,6 +10,7 @@ func main() {
 	// f.Println("BOO")
 	db := models.SetupDB()
 	db.AutoMigrate(&models.PetCategories{})
+	db.AutoMigrate(&models.Accounts{})
 
 	r := routes.SetupRoutes(db)
 	r.Run()
